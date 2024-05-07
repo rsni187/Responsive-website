@@ -21,6 +21,8 @@
   content: "";
   background-color: black;
   position: absolute;
+  top:0px;
+  left: 0px;
   height: 100%;
   width: 100%;
   z-index: -1;  /*content comes upper */
@@ -60,7 +62,7 @@
   display: flex;
   flex-direction: column;
   padding: 3px 200px;
-  height: 530px;
+  height: 490px;
   justify-content: center;
   align-items: center;
 }
@@ -68,6 +70,8 @@
   content: "";
   background: url('img/food\ wallpaper.jpg') no-repeat center center/cover;
   position: absolute;
+  top:0px;
+  left: 0px;
   height: 100%;
   width: 100%;
   z-index: -1;  /*content comes upper */
@@ -88,9 +92,14 @@
 #services{
   display: flex;
   margin: 34px;
+  font-family: "Lilita One", sans-serif;
+  
 }
 #services .box{
   border: 2px solid brown;
+  border-radius: 10px;
+  padding:8px 21px;
+  margin:2px 12px;
 }
 
 #services .box img{
@@ -99,14 +108,95 @@ display: block;
 margin: auto;
 }
 
+#services.box p{
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  text-align: center;
+}
+
+
+
+/* Client Section */
+#client-section{
+  position: relative;
+   height: 300px;
+}
+#client-section::before{
+  content: "";
+  position: absolute;
+  background: url('img/food\ background.jpg');
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  opacity: 0.5;
+}
+#clients{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.clients-items{
+  padding: 44px;
+}
+#clients img{
+  height: 124px;
+}
+
+/* Contact Section */
+#contact{
+  position: relative;
+}
+
+#contact::before{
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  opacity: 0.5;
+  background: url('img/contact\ img.jpg') no-repeat center center/cover;
+}
+#contact-box{
+  display: flex;
+  justify-content: center;
+  align-items:center;
+  padding-bottom: 34px;
+}
+#contact-box form{
+  width: 40%;
+
+}
+
+#contact-box label{
+  font-size: 1.3rem;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+#contact-box input,
+#contact-box textarea{
+  width: 100%;
+  padding: 0.5rem;
+  border-radius: 9px;
+  font-size: 1.1rem;
+}
+
+
+
+footer{
+  background: black;
+  color: aliceblue;
+  padding: 9px 20px;
+  
+}
 /* Utility Classes */
 .h-primary{
   font-size: 3.8rem;
-  padding: 12px;
+  padding: 2px;
+  font-family: "Lilita One", sans-serif;
 }
-.h-primary{
-  font-size: 2.8rem;
+.h-secondary{
+  font-size: 1.8rem;
   padding: 12px;
+  font-family: "Lilita One", sans-serif;
 }
 .btn{
   padding: 6px 20px;
